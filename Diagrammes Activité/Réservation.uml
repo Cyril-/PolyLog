@@ -31,23 +31,23 @@
     <searchpath href="PROJECT_DIR" />
     <members>
       <member type="profile"
-              name="Réservation.zargo_profile.profile" />
+              name="Réservation_profile.profile" />
       <member type="xmi"
-              name="Réservation.zargo.xmi" />
+              name="Réservation.xmi" />
       <member type="pgml"
-              name="Réservation.zargo_Diagrammedeclasses.pgml"
+              name="Réservation_Diagrammedeclasses.pgml"
               diagramclass="org.argouml.uml.diagram.static_structure.ui.UMLClassDiagram"
               diagramname="Diagramme de classes" />
       <member type="pgml"
-              name="Réservation.zargo_Diagrammedecasdutilisation.pgml"
+              name="Réservation_Diagrammedecasdutilisation.pgml"
               diagramclass="org.argouml.uml.diagram.use_case.ui.UMLUseCaseDiagram"
               diagramname="Diagramme de cas d&apos;utilisation" />
       <member type="pgml"
-              name="Réservation.zargo_untitledModelactivity1.pgml"
+              name="Réservation_untitledModelactivity1.pgml"
               diagramclass="org.argouml.uml.diagram.activity.ui.UMLActivityDiagram"
               diagramname="untitledModel activity 1" />
       <member type="todo"
-              name="Réservation.zargo.todo" />
+              name="Réservation.todo" />
     </members>
     <historyfile name="" />
   </argo>
@@ -62,7 +62,7 @@
 			CodeGeneration
 		</plugin>
 </profile>
-<XMI xmi.version = '1.2' xmlns:UML = 'org.omg.xmi.namespace.UML' timestamp = 'Tue Mar 18 09:03:11 CET 2014'>
+<XMI xmi.version = '1.2' xmlns:UML = 'org.omg.xmi.namespace.UML' timestamp = 'Tue Mar 18 09:18:46 CET 2014'>
   <XMI.header>    <XMI.documentation>
       <XMI.exporter>ArgoUML (using Netbeans XMI Writer version 1.0)</XMI.exporter>
       <XMI.exporterVersion>0.34(6) revised on $Date: 2010-01-11 22:20:14 +0100 (Mon, 11 Jan 2010) $ </XMI.exporterVersion>
@@ -336,8 +336,8 @@
                 <UML:Guard xmi.id = '-84-27--57--99-3c56e3ae:144cf708cad:-8000:00000000000008A8'
                   name = 'anon' isSpecification = 'false'>
                   <UML:Guard.expression>
-                    <UML:BooleanExpression xmi.id = '-84-27--57--99-3c56e3ae:144cf708cad:-8000:00000000000008A9'
-                      language = '' body = 'Réservation impossible'/>
+                    <UML:BooleanExpression xmi.id = '-84-27--57--99--38331780:144d444890e:-8000:0000000000000A95'
+                      language = '' body = 'Fait une nouvelle réservation'/>
                   </UML:Guard.expression>
                 </UML:Guard>
               </UML:Transition.guard>
