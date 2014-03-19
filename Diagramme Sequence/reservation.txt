@@ -1,0 +1,14 @@
+title Réservation
+
+Locataire->Mairie: demande de réservation
+Mairie->IHM: afficherReservation()
+IHM->Serveur: ArrayList := getReservation()
+Serveur-->IHM: listeReservation
+
+alt Réservation acceptée
+    Mairie->Locataire: réservation acceptée
+Mairie->IHM:ajouteReservation(Reservation r)
+IHM->Serveur:new Reservation()
+else Réservation refusée
+    Mairie->Locataire:refus
+end
