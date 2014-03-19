@@ -62,7 +62,7 @@
 			CodeGeneration
 		</plugin>
 </profile>
-<XMI xmi.version = '1.2' xmlns:UML = 'org.omg.xmi.namespace.UML' timestamp = 'Wed Mar 19 14:12:31 CET 2014'>
+<XMI xmi.version = '1.2' xmlns:UML = 'org.omg.xmi.namespace.UML' timestamp = 'Wed Mar 19 14:13:18 CET 2014'>
   <XMI.header>    <XMI.documentation>
       <XMI.exporter>ArgoUML (using Netbeans XMI Writer version 1.0)</XMI.exporter>
       <XMI.exporterVersion>0.34(6) revised on $Date: 2010-01-11 22:20:14 +0100 (Mon, 11 Jan 2010) $ </XMI.exporterVersion>
@@ -1397,15 +1397,6 @@
               name = 'Professionnel' visibility = 'public' isSpecification = 'false' isRoot = 'false'
               isLeaf = 'false' isAbstract = 'false' isActive = 'false'>
               <UML:Classifier.feature>
-                <UML:Operation xmi.id = '-84-27--57--99--5237d61a:144d98b912d:-8000:0000000000000B5E'
-                  name = 'afficherPro' visibility = 'public' isSpecification = 'false' ownerScope = 'instance'
-                  isQuery = 'false' concurrency = 'sequential' isRoot = 'false' isLeaf = 'false'
-                  isAbstract = 'false'>
-                  <UML:BehavioralFeature.parameter>
-                    <UML:Parameter xmi.id = '-84-27--57--99--5237d61a:144d98b912d:-8000:0000000000000B5F'
-                      name = 'return' isSpecification = 'false' kind = 'return'/>
-                  </UML:BehavioralFeature.parameter>
-                </UML:Operation>
                 <UML:Attribute xmi.id = '-84-27--57--99--5237d61a:144d98b912d:-8000:0000000000000B60'
                   name = 'nom' visibility = 'public' isSpecification = 'false' ownerScope = 'instance'
                   changeability = 'changeable' targetScope = 'instance'>
@@ -3582,7 +3573,7 @@
       strokecolor="black"
     />
     <group name="Fig16.4"
-         description="org.argouml.uml.diagram.ui.FigAttributesCompartment[857, 539, 310, 65]"
+         description="org.argouml.uml.diagram.ui.FigAttributesCompartment[857, 539, 310, 73]"
          href="-84-27--57--99--5237d61a:144d98b912d:-8000:0000000000000B5D"
          fill="0"
          fillcolor="white"
@@ -3596,7 +3587,7 @@
         x="857"
         y="539"
         width="310"
-        height="65"
+        height="73"
         fill="0"
         fillcolor="white"
         stroke="0"
@@ -3653,7 +3644,7 @@
     </group>
     <rectangle name="Fig16.5"
       x="856"
-      y="603"
+      y="612"
       width="312"
       height="1"
       fill="1"
@@ -3662,7 +3653,7 @@
       strokecolor="black"
     />
     <group name="Fig16.6"
-         description="org.argouml.uml.diagram.ui.FigOperationsCompartment[857, 604, 310, 46]"
+         description="org.argouml.uml.diagram.ui.FigOperationsCompartment[857, 613, 310, 35]"
          href="-84-27--57--99--5237d61a:144d98b912d:-8000:0000000000000B5D"
          fill="0"
          fillcolor="white"
@@ -3674,9 +3665,9 @@
       
       <rectangle name="Fig16.6.0"
         x="857"
-        y="604"
+        y="613"
         width="310"
-        height="46"
+        height="35"
         fill="0"
         fillcolor="white"
         stroke="0"
@@ -3684,23 +3675,7 @@
       />
       <text name="Fig16.6.1"
         x="857"
-        y="604"
-        width="310"
-        height="19"
-        fill="0"
-        fillcolor="white"
-        stroke="0"
-        strokecolor="black"
-        textcolor="black"
-        font="Dialog"
-        italic="false"
-        bold="false"
-        textsize="13"
-        justification="Left"
-      >afficherPro()</text>
-      <text name="Fig16.6.2"
-        x="857"
-        y="623"
+        y="613"
         width="310"
         height="25"
         fill="0"
