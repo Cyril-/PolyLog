@@ -25,6 +25,7 @@
           <div class="nav-collapse collapse">
             <ul class="nav">
               <li class="active"><a href="../accueil/accueil.jsp">Home</a></li>
+              <li class="active"><a href="../accueil/Create.jsp">Ajout Reservation</a></li>
             </ul>
             <form class="navbar-form pull-right">
               <input class="span2" type="text" placeholder="Email">
