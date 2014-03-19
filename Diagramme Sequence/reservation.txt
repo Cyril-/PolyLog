@@ -7,8 +7,19 @@ Serveur-->IHM: listeReservation
 
 alt Réservation acceptée
     Mairie->Locataire: réservation acceptée
-Mairie->IHM:ajouteReservation(Reservation r)
-IHM->Serveur:new Reservation()
+Mairie->IHM:ajouteReservation(InfosReservation)
+IHM->Serveur:Reserv=new Reservation(InfosReservation)
+Serveur->Serveur:ajouteReservation(Reserv)
+Serveur->Mairie:creeDocuments(Reserv())
+Mairie->Locataire:imprime facture
+alt Paiement immédiat
+Locataire->Mairie:Paie
+Mairie->Locataire:imprime convention d'utilisation
+Mairie->Serveur: confirmeReservation(Reserv)
+else Paiement différée
+Mairie->Serveur: confirmePreReservation(Reserv)
+end
 else Réservation refusée
     Mairie->Locataire:refus
 end
+
