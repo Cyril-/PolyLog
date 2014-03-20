@@ -81,7 +81,7 @@ $(document).ready(function() {
 </head>
 <br>
 
-  <div class="span14 offset1">
+  <div class="span12 offset2">
     <div class="container">
       <div class="span4" id="formulaire">
       

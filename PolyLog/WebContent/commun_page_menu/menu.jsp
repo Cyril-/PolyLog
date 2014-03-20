@@ -40,19 +40,8 @@
               <button type="submit" class="btn">Deconnexion</button>
             </form>
 			<% 
-           		}else{
-           	%>
-           	</ul>
-            <form class="navbar-form pull-right" method="post" action="../connexion/identification.jsp">
-              <input name="ident" class="span2" type="text" placeholder="Email">
-              <input name="pwd" class="span2" type="password" placeholder="Password">
-              <button type="submit" class="btn">Connexion</button>
-            </form>
-           	
-           	<%		
            		}
 			%>
-
 
           </div><!--/.nav-collapse -->
         </div>

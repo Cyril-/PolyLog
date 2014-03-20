@@ -20,4 +20,6 @@
               	<p><a class="btn btn-primary btn-large" href="../accueil/polyLog.jsp">Voir Agenda</a></p>
               </center>
             </div>    
-    
+            
+            
+<jsp:include page="../commun_page_menu/footer.jsp"></jsp:include>
