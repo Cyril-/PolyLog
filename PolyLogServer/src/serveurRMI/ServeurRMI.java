@@ -35,7 +35,7 @@ public class ServeurRMI implements InterfaceServeurRMI {
 			System.out.println("Erreur ServeurRMI.lancer(): " + e.getMessage());
 		}
 
-		System.out.println("Serveur RMI prêt");
+		System.out.println("Serveur RMI pret");
 	}
 	
 	public void connexionBase(){

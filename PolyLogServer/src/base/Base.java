@@ -33,7 +33,7 @@ public class Base {
 			System.out.println("Base.ouvrir erreur : " + e.getMessage());
 		}
 		
-		System.out.println("Connection à la base effectuée");
+		System.out.println("Connection à la base effectuee");
 
 		return connection;
 	}
