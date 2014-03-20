@@ -7,10 +7,11 @@
 	
 <%@ page import="java.util.*" %>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.js"></script>		
-<script type='text/javascript' src='../bootstrap/js/fullcalendar.js'></script>
+
  <script src="//code.jquery.com/jquery-1.9.1.js"></script>
 <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.js"></script>		
+<script type='text/javascript' src='../bootstrap/js/fullcalendar.js'></script>
 <link href="../bootstrap/css/fullcalendar.css" rel="stylesheet" media="screen">
 <link href="../bootstrap/css/fullcalendar.print.css" rel="stylesheet" media="screen">
 
@@ -83,14 +84,10 @@ $(document).ready(function() {
 </head>
 <br>
 
-<<<<<<< HEAD
-  <div class="span12 offset2">
-=======
 
-  <div class="span14 offset1">
->>>>>>> 3b4ac386dee56b92a972260ea98152389aa02d85
+  <div class="span12 offset1">
     <div class="container">
-      <div class="span4" id="formulaire">
+      <div class="span3" id="formulaire">
       
       	<form action="../ConventionPDF">
       	
@@ -153,7 +150,7 @@ $(document).ready(function() {
       </div>
       
       
-      	<div class="span7" id="calendar">
+      	<div class="span8" id="calendar">
 		</div>
     </div>
   </div> <!--  span 12 -->
