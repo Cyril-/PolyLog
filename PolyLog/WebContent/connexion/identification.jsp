@@ -13,20 +13,17 @@
 	String ident = "";
 	String pwd = "";
 	
-	System.out.println(ident);
-	System.out.println(pwd);
+	ident=request.getParameter("ident");
+	pwd=request.getParameter("pwd");
 	if(manager.getBase().identification(ident,pwd)){
+		manager.setIdentifie(true);
+		manager.setNom(ident);
 		ok = 1;
-		alert=1;
-		
-	}else{
-		alert=0;
 	}
-			
 	
 	if (ok == 1) {
 	}
-	response.getHeader("../accueil/accueil.jsp");
+	response.sendRedirect("../accueil/accueil.jsp");
 		
 	
 %>

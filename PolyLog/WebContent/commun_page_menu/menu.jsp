@@ -21,17 +21,37 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="brand" href="../accueil/polyLog.jsp">PolyLog</a>
+          <a class="brand pull-left">PolyLog</a>
           <div class="nav-collapse collapse">
             <ul class="nav">
               <li class="active"><a href="../accueil/accueil.jsp">Home</a></li>
-              <li class="active"><a href="../accueil/create.jsp">Ajout Reservation</a></li>
+            <%          
+           		if(manager.isIdentifie()){
+            %>
             </ul>
-            <form class="navbar-form pull-right" method="post">
-              <input class="span2" type="text" placeholder="Email">
-              <input class="span2" type="password" placeholder="Password">
-              <button type="submit" class="btn">Sign in</button>
+            <ul class="nav">
+            <li class="active"><a href="../accueil/create.jsp">Ajout Reservation</a></li>
+            </ul>
+            <ul class="nav pull-right">
+            <li class="active"><a >Bonjour <%= manager.getNom() %></a></li>
+              <form class="navbar-form pull-right" method="post" action="../connexion/deconnexion.jsp">
+              <button type="submit" class="btn">Deconnexion</button>
             </form>
+			<% 
+           		}else{
+           	%>
+           	</ul>
+            <form class="navbar-form pull-right" method="post" action="../connexion/identification.jsp">
+              <input name="ident" class="span2" type="text" placeholder="Email">
+              <input name="pwd" class="span2" type="password" placeholder="Password">
+              <button type="submit" class="btn">Connexion</button>
+            </form>
+           	
+           	<%		
+           		}
+			%>
+
+
           </div><!--/.nav-collapse -->
         </div>
       </div>

@@ -14,8 +14,10 @@
 </head>
 
  <div class="hero-unit">
-              <h1>Hello, world!</h1>
-              <p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-              <p><a class="btn btn-primary btn-large">Learn more</a></p>
+              <h1 style=" color:grey;">Mairie De Chamigny</h1>
+              <center>
+              	<p><h3>Vous en avez marre de vous déplacer a la mairie pour rien ???</h3> alors regardez vite si la salle est libre sur notre emploi du temps en ligne</p>
+              	<p><a class="btn btn-primary btn-large" href="../accueil/polyLog.jsp">Voir l'EDT</a></p>
+              </center>
             </div>    
     
