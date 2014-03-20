@@ -15,7 +15,7 @@
 	
 	ident=request.getParameter("ident");
 	pwd=request.getParameter("pwd");
-	if(manager.getBase().identification(ident,pwd)){
+	if(manager.getServeur().connexion(ident, pwd)){
 		manager.setIdentifie(true);
 		manager.setNom(ident);
 		ok = 1;
