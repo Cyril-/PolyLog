@@ -9,48 +9,18 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.js"></script>		
 <script type='text/javascript' src='../bootstrap/js/fullcalendar.js'></script>
+ <script src="//code.jquery.com/jquery-1.9.1.js"></script>
+<script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
 <link href="../bootstrap/css/fullcalendar.css" rel="stylesheet" media="screen">
 <link href="../bootstrap/css/fullcalendar.print.css" rel="stylesheet" media="screen">
 
 
 <script>
 $(document).ready(function() {
-
-	var date = new Date();
-	var d = date.getDate();
-	var m = date.getMonth();
-	var y = date.getFullYear();
 	
-	$('#calendar').fullCalendar({
-		header: {
-			left: 'today prev,next',
-			center: 'title',
-			right: 'month,agendaWeek,agendaDay'
-		},
-	    title: "Mon Agenda",
-		theme: false,
-		editable: false,
-		height: 500,
-		events: [
-					{
-						id: 1,
-						title: 'Aller sur Yriase.fr',
-						start: new Date(y, m, 28,8,30),
-						end: new Date(y, m, 28,11,45),
-						allDay: false
-					},
-					{
-						id: 2,
-						title: 'Nourrir le chat !',
-						start: new Date(y, m, 28, 8, 0),
-						end: new Date(y, m, 28, 8, 45),
-						allDay: false
-					}
-				],
-			      backgroundColor: 'green',
-			      borderColor: 'green',
-			      textColor: 'yellow'
-	});
+	 $(function() {
+		 $( "#accordion" ).accordion();
+		 });
 });
 
 </script>
@@ -63,11 +33,10 @@ $(document).ready(function() {
 
   <div class="span12">
     <div class="row">
-      <div class="span6" id="formulaire">
-      
+      <div class="span6" id="accordion">
       	<form action="../ConventionPDF">
 		    <fieldset>
-		    <legend>Informations du locataire</legend>
+		    <h3>Informations du locataire</h3>
      		<div class="span3">
 		    <label>Nom</label>
 		    <input type="text">
@@ -84,7 +53,7 @@ $(document).ready(function() {
 		    <label>Téléphone</label>
 		    <input type="text">
 		    </div>
-		    <legend>Informations sur l'événement</legend>
+		    <h3>Informations sur l'événement</h3>
 		    <div class="span3">
 		     <label>Nom de l'événement</label>
 		    <input type="text">
@@ -105,7 +74,7 @@ $(document).ready(function() {
 		    <input type="text">
 		    </div>
 		    </label>
-		    <legend>Informations sur l'assurance</legend>
+		    <h3>Informations sur l'assurance</h3>
 		    <div class="span3">
 		    <label>Agence d'assurance</label>
 		    <input type="text">
