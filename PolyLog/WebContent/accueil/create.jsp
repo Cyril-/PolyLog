@@ -23,13 +23,35 @@
       
       	<form>
 		    <fieldset>
-		    <legend>Legend</legend>
-		    <label>Label name</label>
-		    <input type="text" placeholder="Type something…">
-		    <span class="help-block">Example block-level help text here.</span>
+		    <legend>Nouvelle réservation</legend>
+		    <label>Nom</label>
+		    <input type="text" placeholder="Nom du locataire">
+		    <label>Prénom</label>
+		    <input type="text" placeholder="Prénom du locataire">
+		    <label>Adresse</label>
+		    <input type="text" placeholder="Adresse du locataire">
+		    <label>Téléphone</label>
+		    <input type="text" placeholder="Téléphone du locataire">
+		     <label>Nom de l'événement</label>
+		    <input type="text" placeholder="Nom de l'événement">
+		     <label>Description</label>
+		    <textarea rows="4" cols="50">Description de l'événement</textarea> 
+		     <label>Date</label>
+		    <input type="text" placeholder="Date de l'événement">
 		    <label class="checkbox">
-		    <input type="checkbox"> Check me out
+		    <input type="checkbox"> Evénement privé
 		    </label>
+		    <label>Nombre de participants</label>
+		    <input type="text" placeholder="Nombre de participants">
+		    <label>Prix</label>
+		    <input type="text" placeholder="Prix de la location">
+		    <label>Agence d'assurance</label>
+		    <input type="text" placeholder="Nom de l'agence d'assurance">
+		    <label>Numéro de police d'assurance</label>
+		    <input type="text" placeholder="Numéro de police d'assurance">
+		    <label>Date de souscription</label>
+		    <input type="text" placeholder="Date de souscription">
+
 		    <button type="submit" class="btn">Submit</button>
 		    </fieldset>
 	    </form>
