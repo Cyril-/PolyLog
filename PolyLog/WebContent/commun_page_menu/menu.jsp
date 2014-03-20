@@ -27,7 +27,7 @@
               <li class="active"><a href="../accueil/accueil.jsp">Home</a></li>
               <li class="active"><a href="../accueil/create.jsp">Ajout Reservation</a></li>
             </ul>
-            <form class="navbar-form pull-right">
+            <form class="navbar-form pull-right" method="post">
               <input class="span2" type="text" placeholder="Email">
               <input class="span2" type="password" placeholder="Password">
               <button type="submit" class="btn">Sign in</button>

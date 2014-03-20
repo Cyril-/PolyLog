@@ -2,6 +2,8 @@ package base;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.util.ResourceBundle;
 
 public class Base {
@@ -63,5 +65,33 @@ public class Base {
 		}
 		connection = null;
 		message("Base.fermer déconnexion effectuée");
-	}		
+	}	
+	
+	public boolean identification(String ident,String pwd){
+		PreparedStatement ps = null;
+		String sql="SELECT * FROM user WHERE name_user='"+ident+"' AND pwd='"+pwd+"'";
+		try{
+			ps = connection.prepareStatement(sql);
+			ResultSet rs = ps.executeQuery(sql);
+			int compteur = 0;
+			while (rs.next())
+			{
+			    compteur++;
+			}
+			if(compteur==0) return false; 
+			else return true;
+		}
+		catch (Exception e){
+			System.out.println("Base: Identification "+ e.getMessage());
+		}
+		
+		try{
+			if(ps!= null) ps.close();
+			return true;
+		}
+		catch(Exception e){		return false;}
+
+	}
+	
+	
 }
