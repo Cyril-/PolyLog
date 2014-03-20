@@ -23,51 +23,51 @@
 		    <legend>Informations du locataire</legend>
      		<div class="span3">
 		    <label>Nom</label>
-		    <input type="text" placeholder="Nom du locataire">
+		    <input type="text">
 		    </div>
 		    <label>Prénom</label>
-		    <input type="text" placeholder="Prénom du locataire">
+		    <input type="text">
 		    <div class="span3">
 		    <label>Adresse</label>
-		    <input type="text" placeholder="Adresse du locataire">
+		    <input type="text">
 		    </div>
 		    <label>Ville</label>
-		    <input type="text" placeholder="Ville du locataire">
+		    <input type="text">
 		    <div class="span3">
 		    <label>Téléphone</label>
-		    <input type="text" placeholder="Téléphone du locataire">
+		    <input type="text">
 		    </div>
 		    <legend>Informations sur l'événement</legend>
 		    <div class="span3">
 		     <label>Nom de l'événement</label>
-		    <input type="text" placeholder="Nom de l'événement">
+		    <input type="text">
 		    </div>
 		     <label>Description</label>
-		    <textarea rows="4" cols="50">Description de l'événement</textarea>
+		    <textarea rows="4" cols="50"></textarea>
 		    <div class="span3">
 		     <label>Date</label>
-		    <input type="text" placeholder="Date de l'événement">
+		    <input type="text">
 		    </div>
 			<label>Nombre de participants</label>
-		    <input type="text" placeholder="Nombre de participants">
+		    <input type="text">
 		    <div class="span3">
 		    <label class="checkbox">
 		    <input type="checkbox"> Evénement privé
 		    </div><div class="span3">
 		    <label>Prix</label>
-		    <input type="text" placeholder="Prix de la location">
+		    <input type="text">
 		    </div>
 		    </label>
 		    <legend>Informations sur l'assurance</legend>
 		    <div class="span3">
 		    <label>Agence d'assurance</label>
-		    <input type="text" placeholder="Nom de l'agence d'assurance">
+		    <input type="text">
 		    </div>
 		    <label>Numéro de police d'assurance</label>
-		    <input type="text" placeholder="Numéro de police d'assurance">
+		    <input type="text">
 		    <div class="span3">
 		    <label>Date de souscription</label>
-		    <input type="text" placeholder="Date de souscription">
+		    <input type="text">
 			</div><div class="span3">
 		    <button type="submit" class="btn">Enregistrer</button>
 		    </div>
