@@ -87,7 +87,7 @@ $(document).ready(function() {
       
       	<form action="../ConventionPDF">
       	
-		   <p><a id="locataire" class="pager">Informations Locataire</a></p>
+		   <div id="locataire"><ul class="nav nav-tabs">Informations Locataire</ul></div>
 		    
      		<div id="infoLoc" class="span3">
 		    <label>Nom</label>
@@ -103,7 +103,7 @@ $(document).ready(function() {
 		     </div>
 		    		    
 		    		    
-		    <p><a id="evenement" class="nav nav-pills">Informations Evènement</a></p>
+		    <div id="evenement"><ul class="nav nav-tabs">Informations Evènement</ul></div>
 
 			<div id="infoEve" class="span3">
 		    <label>Nom de l'événement</label>
@@ -116,13 +116,14 @@ $(document).ready(function() {
 		    <input type="text">
 		    <label class="checkbox">
 		    <input type="checkbox"> Evénement privé
+		    </label>
 		    <label>Prix</label>
 		    <input type="text">
-		    </label>
+
 		    </div>
 		    
 		    
-		    <p><a id="assurance" class="nav nav-pills">Informations Assurance</a></p>
+		    <div id="assurance"><ul class="nav nav-tabs">Informations Assurance</a></div>
 		    
 		   	
 		    <div id="infoAss" class="span3">
