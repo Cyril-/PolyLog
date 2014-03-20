@@ -24,7 +24,7 @@ import com.itextpdf.text.pdf.PdfWriter;
 /**
  * Servlet implementation class Pdf
  */
-@WebServlet("/Pdf")
+@WebServlet("/ConventionPDF")
 public class ConventionPDF extends HttpServlet {
 	private static final long serialVersionUID = 8461920144699965519L;
        

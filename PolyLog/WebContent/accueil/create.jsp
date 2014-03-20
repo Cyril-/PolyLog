@@ -7,6 +7,53 @@
 	
 <%@ page import="java.util.*" %>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.js"></script>		
+<script type='text/javascript' src='../bootstrap/js/fullcalendar.js'></script>
+<link href="../bootstrap/css/fullcalendar.css" rel="stylesheet" media="screen">
+<link href="../bootstrap/css/fullcalendar.print.css" rel="stylesheet" media="screen">
+
+
+<script>
+$(document).ready(function() {
+
+	var date = new Date();
+	var d = date.getDate();
+	var m = date.getMonth();
+	var y = date.getFullYear();
+	
+	$('#calendar').fullCalendar({
+		header: {
+			left: 'today prev,next',
+			center: 'title',
+			right: 'month,agendaWeek,agendaDay'
+		},
+	    title: "Mon Agenda",
+		theme: false,
+		editable: false,
+		height: 500,
+		events: [
+					{
+						id: 1,
+						title: 'Aller sur Yriase.fr',
+						start: new Date(y, m, 28,8,30),
+						end: new Date(y, m, 28,11,45),
+						allDay: false
+					},
+					{
+						id: 2,
+						title: 'Nourrir le chat !',
+						start: new Date(y, m, 28, 8, 0),
+						end: new Date(y, m, 28, 8, 45),
+						allDay: false
+					}
+				],
+			      backgroundColor: 'green',
+			      borderColor: 'green',
+			      textColor: 'yellow'
+	});
+});
+
+</script>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
 <title>Réserver un créneau</title>
@@ -14,7 +61,7 @@
 </head>
 <br>
 
-  <div class="span9">
+  <div class="span12">
     <div class="row">
       <div class="span6" id="formulaire">
       
@@ -74,12 +121,14 @@
 		    </div>   
 		    </fieldset>
 	    </form>
-      
       </div>
+      
+      
       	<div class="span3">
-      		<iframe src="https://www.google.com/calendar/embed?title=PolyLogAgenda&amp;showTitle=0&amp;showPrint=0&amp;showCalendars=0&amp;mode=WEEK&amp;height=600&amp;wkst=2&amp;hl=fr&amp;bgcolor=%23FFFFFF&amp;src=o71ggrtn7psip69jh6uud7fsg97i87io%40import.calendar.google.com&amp;color=%23B1365F&amp;ctz=Europe%2FParis" style=" border-width:0 " width="800" height="600" frameborder="0" scrolling="no"></iframe> 
+      		<div id="calendar">
+      		</div>
 		</div>
     </div>
-  </div>
-
+  </div> <!--  span 12 -->
+ 
     

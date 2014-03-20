@@ -20,12 +20,14 @@ $(document).ready(function() {
 	
 	$('#calendar').fullCalendar({
 		header: {
-			left: 'prev today,next today',
+			left: 'today prev,next',
 			center: 'title',
 			right: 'month,agendaWeek,agendaDay'
 		},
-		theme: true,
+	    title: "Mon Agenda",
+		theme: false,
 		editable: false,
+		height: 500,
 		events: [
 					{
 						id: 1,
@@ -46,7 +48,6 @@ $(document).ready(function() {
 			      borderColor: 'green',
 			      textColor: 'yellow'
 	});
-	
 });
 
 </script>	
@@ -62,7 +63,6 @@ $(document).ready(function() {
   </head>
     
     <body>  
-    
 <br></br>
 
 <div class="span12 offset2" id="calendar">
