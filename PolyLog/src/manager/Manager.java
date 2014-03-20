@@ -5,10 +5,10 @@ import base.Base;
 public class Manager{
 	private boolean identifie = false;
 	private String nom = "";
-	private Base base;
+	Base base = new Base();
 	
 	public Manager(){
-		base = new Base();
+		base.ouvrir();
 	}
 	
 	public boolean isIdentifie() {

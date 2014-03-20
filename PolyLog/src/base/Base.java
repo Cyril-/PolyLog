@@ -12,7 +12,6 @@ public class Base {
 	private String pwd;
 	
 	public Base() {
-		ouvrir();
 	}
 	
 	public Connection getConnection() {
@@ -35,6 +34,7 @@ public class Base {
 			url = rb.getString("url");
 			user = rb.getString("user");
 			pwd = rb.getString("pwd");
+
 			connection = DriverManager.getConnection(url,user,pwd);
 			
 			message("User = "+ user );
