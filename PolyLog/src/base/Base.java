@@ -11,6 +11,14 @@ public class Base {
 	private String user;
 	private String pwd;
 	
+	static {
+		try {
+			Class.forName("com.mysql.jdbc.Driver").newInstance();
+		} catch (Exception e) {
+			System.out.println("Base erreur Class.forName " + e.getMessage());
+		}
+	}
+	
 	public Base() {
 		ouvrir();
 	}

@@ -5,12 +5,11 @@
 	scope="session"
 	class="manager.Manager" />
 	
-<%@page import="Bean.Group" %>
 <%@ page import="java.util.*" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
-<title>Identification</title>
+<title>Réserver un créneau</title>
 <jsp:include page="../commun_page_menu/menu.jsp"></jsp:include>
 </head>
 <br>
