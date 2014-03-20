@@ -20,6 +20,8 @@ $(document).ready(function() {
 	var d = date.getDate();
 	var m = date.getMonth();
 	var y = date.getFullYear();
+	$( "#infoEve" ).slideUp();
+	$( "#infoAss" ).slideUp();
 	
 	$('#calendar').fullCalendar({
 		header: {
@@ -51,6 +53,24 @@ $(document).ready(function() {
 			      borderColor: 'green',
 			      textColor: 'yellow'
 	});
+	
+	$( "#locataire" ).click(function() {
+	$( "#infoEve" ).slideUp();
+	$( "#infoAss" ).slideUp();
+	$( "#infoLoc" ).slideDown();
+	});
+	
+	$( "#evenement" ).click(function() {
+		$( "#infoEve" ).slideDown();
+		$( "#infoAss" ).slideUp();
+		$( "#infoLoc" ).slideUp();
+		});
+	
+	$( "#assurance" ).click(function() {
+		$( "#infoEve" ).slideUp();
+		$( "#infoAss" ).slideDown();
+		$( "#infoLoc" ).slideUp();
+		});
 });
 
 </script>
@@ -61,72 +81,68 @@ $(document).ready(function() {
 </head>
 <br>
 
-  <div class="span12">
-    <div class="row">
-      <div class="span6" id="formulaire">
+  <div class="span14 offset1">
+    <div class="container">
+      <div class="span4" id="formulaire">
       
       	<form action="../ConventionPDF">
-		    <fieldset>
-		    <legend>Informations du locataire</legend>
-     		<div class="span3">
+      	
+		   <p><a id="locataire" class="pager">Informations Locataire</a></p>
+		    
+     		<div id="infoLoc" class="span3">
 		    <label>Nom</label>
 		    <input type="text">
-		    </div>
 		    <label>Prénom</label>
 		    <input type="text">
-		    <div class="span3">
 		    <label>Adresse</label>
 		    <input type="text">
-		    </div>
 		    <label>Ville</label>
 		    <input type="text">
-		    <div class="span3">
 		    <label>Téléphone</label>
 		    <input type="text">
-		    </div>
-		    <legend>Informations sur l'événement</legend>
-		    <div class="span3">
-		     <label>Nom de l'événement</label>
+		     </div>
+		    		    
+		    		    
+		    <p><a id="evenement" class="nav nav-pills">Informations Evènement</a></p>
+
+			<div id="infoEve" class="span3">
+		    <label>Nom de l'événement</label>
 		    <input type="text">
-		    </div>
-		     <label>Description</label>
+			<label>Description</label>
 		    <textarea rows="4" cols="50" style="resize:none"></textarea>
-		    <div class="span3">
-		     <label>Date</label>
+		    <label>Date</label>
 		    <input type="text">
-		    </div>
 			<label>Nombre de participants</label>
 		    <input type="text">
-		    <div class="span3">
 		    <label class="checkbox">
 		    <input type="checkbox"> Evénement privé
-		    </div><div class="span3">
 		    <label>Prix</label>
 		    <input type="text">
-		    </div>
 		    </label>
-		    <legend>Informations sur l'assurance</legend>
-		    <div class="span3">
+		    </div>
+		    
+		    
+		    <p><a id="assurance" class="nav nav-pills">Informations Assurance</a></p>
+		    
+		   	
+		    <div id="infoAss" class="span3">
 		    <label>Agence d'assurance</label>
 		    <input type="text">
-		    </div>
 		    <label>Numéro de police d'assurance</label>
 		    <input type="text">
-		    <div class="span3">
 		    <label>Date de souscription</label>
 		    <input type="text">
-			</div><div class="span3">
+		    </div>
 		    <button type="submit" class="btn">Réservation</button>
 		    <button type="submit" class="btn">Pré-réservation</button>
-		    </div>   
+
+		       
 		    </fieldset>
 	    </form>
       </div>
       
       
-      	<div class="span3">
-      		<div id="calendar">
-      		</div>
+      	<div class="span7" id="calendar">
 		</div>
     </div>
   </div> <!--  span 12 -->
