@@ -9,6 +9,8 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.js"></script>		
 <script type='text/javascript' src='../bootstrap/js/fullcalendar.js'></script>
+ <script src="//code.jquery.com/jquery-1.9.1.js"></script>
+<script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
 <link href="../bootstrap/css/fullcalendar.css" rel="stylesheet" media="screen">
 <link href="../bootstrap/css/fullcalendar.print.css" rel="stylesheet" media="screen">
 
@@ -81,7 +83,12 @@ $(document).ready(function() {
 </head>
 <br>
 
+<<<<<<< HEAD
   <div class="span12 offset2">
+=======
+
+  <div class="span14 offset1">
+>>>>>>> 3b4ac386dee56b92a972260ea98152389aa02d85
     <div class="container">
       <div class="span4" id="formulaire">
       
@@ -90,6 +97,7 @@ $(document).ready(function() {
 		   <div id="locataire"><ul class="nav nav-tabs">Informations Locataire</ul></div>
 		    
      		<div id="infoLoc" class="span3">
+
 		    <label>Nom</label>
 		    <input type="text">
 		    <label>Prénom</label>
@@ -100,6 +108,7 @@ $(document).ready(function() {
 		    <input type="text">
 		    <label>Téléphone</label>
 		    <input type="text">
+
 		     </div>
 		    		    
 		    		    
@@ -107,6 +116,7 @@ $(document).ready(function() {
 
 			<div id="infoEve" class="span3">
 		    <label>Nom de l'événement</label>
+
 		    <input type="text">
 			<label>Description</label>
 		    <textarea rows="4" cols="50" style="resize:none"></textarea>
@@ -120,13 +130,13 @@ $(document).ready(function() {
 		    <label>Prix</label>
 		    <input type="text">
 
-		    </div>
-		    
+		    </div>  
 		    
 		    <div id="assurance"><ul class="nav nav-tabs">Informations Assurance</a></div>
 		    
 		   	
 		    <div id="infoAss" class="span3">
+
 		    <label>Agence d'assurance</label>
 		    <input type="text">
 		    <label>Numéro de police d'assurance</label>
