@@ -4,7 +4,7 @@
       <hr>
    
          <div class="footer">
-        	 	<p style='text-align:center'>&copy; Romain Visbecq - François Marsault 2014 </p>
+        	 	<p><a href="../connexion/identification.jsp" style='text-align:center'>Connexion</a>   &copy; PolyLog 2014 </p>
      	 </div>
      
 

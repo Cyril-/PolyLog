@@ -83,8 +83,12 @@ $(document).ready(function() {
 </head>
 <br>
 
+<<<<<<< HEAD
+  <div class="span12 offset2">
+=======
 
   <div class="span14 offset1">
+>>>>>>> 3b4ac386dee56b92a972260ea98152389aa02d85
     <div class="container">
       <div class="span4" id="formulaire">
       
