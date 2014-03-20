@@ -16,8 +16,8 @@
  <div class="hero-unit">
               <h1 style=" color:grey;">Mairie De Chamigny</h1>
               <center>
-              	<p><h3>Vous en avez marre de vous déplacer a la mairie pour rien ???</h3> alors regardez vite si la salle est libre sur notre emploi du temps en ligne</p>
-              	<p><a class="btn btn-primary btn-large" href="../accueil/polyLog.jsp">Voir l'EDT</a></p>
+              	<p><h3>Vous voulez verifier si la salle est libre sans vous déplacer en Mairie ?</h3> alors regardez vite sur l'agenda en ligne</p>
+              	<p><a class="btn btn-primary btn-large" href="../accueil/polyLog.jsp">Voir Agenda</a></p>
               </center>
             </div>    
     

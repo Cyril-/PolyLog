@@ -11,7 +11,7 @@
     <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
 <link type='text/css' href='../commun_page_menu/menu.css'	rel='stylesheet' />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+
 
   <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
