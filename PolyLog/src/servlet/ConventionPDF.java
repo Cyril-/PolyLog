@@ -25,13 +25,13 @@ import com.itextpdf.text.pdf.PdfWriter;
  * Servlet implementation class Pdf
  */
 @WebServlet("/Pdf")
-public class Pdf extends HttpServlet {
+public class ConventionPDF extends HttpServlet {
 	private static final long serialVersionUID = 8461920144699965519L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Pdf() {
+    public ConventionPDF() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -48,7 +48,7 @@ public class Pdf extends HttpServlet {
   		/********Permet d'afficher le pdf en ligne***********/
   	
         response.setContentType("application/pdf");
-        response.setHeader("Content-Disposition", " inline; filename=ListBoat.pdf"); //ListeBoat.pdf sera le nom si on veut enregistrer le pdf sur son ordinateur
+        response.setHeader("Content-Disposition", " inline; filename=ConventionUtilisation.pdf");
         PdfWriter.getInstance(document,response.getOutputStream());
         
         /****************************************************/
@@ -60,41 +60,17 @@ public class Pdf extends HttpServlet {
         
         document.addTitle("Convention d'utilisation");
         
-        Paragraph p = new Paragraph("Information sur le locataire",FontFactory.getFont(FontFactory.COURIER, 24, Font.BOLD)); // creation de la 1ere ligne du pdf qui correspond au titre 
+        String nom="Le Plénier";
+        String prenom="Cyril";
+        
+        Paragraph p = new Paragraph("Convention d'utilisation",FontFactory.getFont(FontFactory.COURIER, 24, Font.BOLD)); // creation de la 1ere ligne du pdf qui correspond au titre 
         p.setSpacingAfter(8);
         document.add(p);
+        Paragraph p2 = new Paragraph("Informations sur le locataire",FontFactory.getFont(FontFactory.COURIER, 24, Font.BOLD));
+        document.add(p2);
+        document.add(new Phrase("Nom : "+nom+"        Prénom : "+prenom));
+        
 
-        PdfPTable   table = new PdfPTable(new float[] { 3f, 4f, 3f,2f }); // creation d'un tableau
-        
-        table.addCell(new Phrase("Nom",FontFactory.getFont(FontFactory.COURIER, 18, Font.BOLD))); // titre des colonnes
-        table.addCell(new Phrase("Notice",FontFactory.getFont(FontFactory.COURIER, 18, Font.BOLD)));
-        table.addCell(new Phrase("Image",FontFactory.getFont(FontFactory.COURIER, 18, Font.BOLD)));
-        table.addCell(new Phrase("Type",FontFactory.getFont(FontFactory.COURIER, 18, Font.BOLD)));
-        
-        /********************* Ajout des éléments dans le tableaux *********************************/
-        
-        for(int i=0;i<rs.size();i++){
-        	int ok=0;
-        	Image pdfImage=null;
-        	if(manager.getIsr().recupBlob(rs.get(i).getId_boat()).length != 0){
-        		pdfImage = Image.getInstance(manager.getIsr().recupBlob(rs.get(i).getId_boat()),true); // recuperation de l'image
-        		ok=1;
-        	}	
-      	  table.addCell(rs.get(i).getName_boat());
-      	  table.addCell(rs.get(i).getNotice());
-      	  if(ok==0){
-      		  table.addCell("Pas D'image");
-      	  }else{
-          	  table.addCell(pdfImage);      		  
-      	  }
-
-      	  table.addCell(rs.get(i).getGroupe());
-      	
-      	 
-      	  
-            
-        }
-        document.add(table);
 
         
   	} catch (DocumentException de) {

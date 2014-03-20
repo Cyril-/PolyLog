@@ -3,6 +3,9 @@ body {
   padding-bottom: 20px;
 }
 
+#formulaire {
+	background-color: white;	
+}
 
 h1{ 
 text-align : center; 

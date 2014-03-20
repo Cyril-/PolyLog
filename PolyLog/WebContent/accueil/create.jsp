@@ -16,9 +16,9 @@
 
   <div class="span9">
     <div class="row">
-      <div class="span6">
+      <div class="span6" id="formulaire">
       
-      	<form>
+      	<form action="../ConventionPDF">
 		    <fieldset>
 		    <legend>Informations du locataire</legend>
      		<div class="span3">
@@ -70,8 +70,8 @@
 		    <input type="text">
 			</div><div class="span3">
 		    <button type="submit" class="btn">Réservation</button>
-		    </div>
 		    <button type="submit" class="btn">Pré-réservation</button>
+		    </div>   
 		    </fieldset>
 	    </form>
       
