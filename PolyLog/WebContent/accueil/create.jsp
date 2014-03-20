@@ -43,7 +43,7 @@
 		    <input type="text">
 		    </div>
 		     <label>Description</label>
-		    <textarea rows="4" cols="50"></textarea>
+		    <textarea rows="4" cols="50" style="resize:none"></textarea>
 		    <div class="span3">
 		     <label>Date</label>
 		    <input type="text">
@@ -69,8 +69,9 @@
 		    <label>Date de souscription</label>
 		    <input type="text">
 			</div><div class="span3">
-		    <button type="submit" class="btn">Enregistrer</button>
+		    <button type="submit" class="btn">Réservation</button>
 		    </div>
+		    <button type="submit" class="btn">Pré-réservation</button>
 		    </fieldset>
 	    </form>
       
