@@ -98,15 +98,15 @@ $(document).ready(function() {
      		<div id="infoLoc" class="span3">
 
 		    <label>Nom</label>
-		    <input type="text">
+		    <input type="text" name="nom">
 		    <label>Prénom</label>
-		    <input type="text">
+		    <input type="text" name="prenom">
 		    <label>Adresse</label>
-		    <input type="text">
+		    <input type="text" name="adresse">
 		    <label>Ville</label>
-		    <input type="text">
+		    <input type="text" name="ville">
 		    <label>Téléphone</label>
-		    <input type="text">
+		    <input type="text" name="tel">
 
 		     </div>
 		    		    
@@ -116,18 +116,18 @@ $(document).ready(function() {
 			<div id="infoEve" class="span3">
 		    <label>Nom de l'événement</label>
 
-		    <input type="text">
+		    <input type="text" name="nomEvent">
 			<label>Description</label>
-		    <textarea rows="4" cols="50" style="resize:none"></textarea>
+		    <textarea rows="4" cols="50" style="resize:none" name="desc"></textarea>
 		    <label>Date</label>
-		    <input type="text">
+		    <input type="text" name="date">
 			<label>Nombre de participants</label>
-		    <input type="text">
+		    <input type="text" name="nbPart">
 		    <label class="checkbox">
-		    <input type="checkbox"> Evénement privé
+		    <input type="checkbox" name="prive"> Evénement privé
 		    </label>
 		    <label>Prix</label>
-		    <input type="text">
+		    <input type="text" name="prix">
 
 		    </div>  
 		    
@@ -137,11 +137,11 @@ $(document).ready(function() {
 		    <div id="infoAss" class="span3">
 
 		    <label>Agence d'assurance</label>
-		    <input type="text">
+		    <input type="text" name="nomAssur">
 		    <label>Numéro de police d'assurance</label>
-		    <input type="text">
+		    <input type="text" name="nbAssur">
 		    <label>Date de souscription</label>
-		    <input type="text">
+		    <input type="text" name="dateSous">
 		    </div>
 		    <button type="submit" class="btn">Réservation</button>
 		    <button type="submit" class="btn">Pré-réservation</button>
