@@ -83,12 +83,8 @@ $(document).ready(function() {
 </head>
 <br>
 
-<<<<<<< HEAD
-  <div class="span12 offset2">
-=======
 
   <div class="span14 offset1">
->>>>>>> 3b4ac386dee56b92a972260ea98152389aa02d85
     <div class="container">
       <div class="span4" id="formulaire">
       
@@ -112,7 +108,7 @@ $(document).ready(function() {
 		     </div>
 		    		    
 		    		    
-		    <div id="evenement"><ul class="nav nav-tabs">Informations Evènement</ul></div>
+		    <div id="evenement"><ul class="nav nav-tabs">Informations Evénement</ul></div>
 
 			<div id="infoEve" class="span3">
 		    <label>Nom de l'événement</label>
