@@ -140,7 +140,7 @@ $(document).ready(function() {
 		</div>
       <div class="span4" id="formulaire">
       
-      	<form method="post" action="../ConventionPDF">
+      	<form method="post" action="../BDD">
       	
 		   <div id="locataire"><ul class="nav nav-tabs"> Informations Locataire </ul></div>
 		    
@@ -152,8 +152,8 @@ $(document).ready(function() {
 		    <input type="text" name="prenom">
 		    <label>Type de locataire</label>
 		    <select id="selectL">
-		    <option value=0 selected>Selectionnez un type</option>
-		    <option value=1 >Habitant de la commune</option>
+		    <option value="0" selected>Selectionnez un type</option>
+		    <option value="1" >Habitant de la commune</option>
 		    <option value="2">Association</option>
 		    <option value="3">Extérieur</option>
 		    <option value="4">privée</option>
@@ -202,10 +202,9 @@ $(document).ready(function() {
 		    <input type="checkbox" name="prereservation"> Pré-réservation
 		    </label>
 		    <button type="submit" class="btn">Enregistrer</button>
+		    <a href="../ConventionPDF?nom="nom class="btn">Imprimer Convention</a>
 	    </form>
-	    <form method="post" action="../ConventionPDF">
-	    <button type="submit" class="btn">Imprimer Convention</button>
-	    </form>
+
 	    <form method="post" action="../FacturePDF">
 	    <button type="submit" class="btn">Imprimer Facture</button>
 	    </form>
