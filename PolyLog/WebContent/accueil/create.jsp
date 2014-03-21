@@ -19,44 +19,63 @@
 <script>
 $(document).ready(function() {
 
-	var date = new Date();
-	var d = date.getDate();
-	var m = date.getMonth();
-	var y = date.getFullYear();
-	$( "#infoEve" ).slideUp();
-	$( "#infoAss" ).slideUp();
-	
-	$('#calendar').fullCalendar({
-		header: {
-			left: 'today prev,next',
-			center: 'title',
-			right: 'month,agendaWeek,agendaDay'
-		},
-	    title: "Mon Agenda",
-		theme: false,
-		editable: false,
-		height: 500,
-		events: [
-					{
-						id: 1,
-						title: 'Aller sur Yriase.fr',
-						start: new Date(y, m, 28,8,30),
-						end: new Date(y, m, 28,11,45),
-						allDay: false
-					},
-					{
-						id: 2,
-						title: 'Nourrir le chat !',
-						start: new Date(y, m, 28, 8, 0),
-						end: new Date(y, m, 28, 8, 45),
-						allDay: false
-					}
-				],
-			      backgroundColor: 'green',
-			      borderColor: 'green',
-			      textColor: 'yellow'
-	});
-	
+		var date = new Date();
+		var d = date.getDate();
+		var m = date.getMonth();
+		var y = date.getFullYear();
+		$( "#infoEve" ).slideUp();
+		$( "#infoAss" ).slideUp();
+		$( "#infoLoc" ).slideDown();
+		
+		$('#calendar').fullCalendar({
+			header: {
+				left: 'today prev,next',
+				center: 'title',
+				right: 'month,agendaWeek,agendaDay'
+			},
+			timeFormat: 'H(:mm)',
+			theme: false,
+			editable: false,
+			height: 500,
+			buttonText:
+			{
+			    today:    'Aurjourd"hui',
+			    month:    'mois',
+			    week:     'semaine',
+			    day:      'jour'
+			},
+			monthNames:['Janvier', 'Fevier', 'Mars', 'Avril', 'Mai', 'Juin','Juillet', 'Aout', 'Septembre', 'Octobre', 'Novembre', 'Decembre'],
+			monthNamesShort:['Jan', 'Fév', 'Mar', 'Avr', 'Mai', 'Juin','Juil', 'Aout', 'Sept', 'Oct', 'Nov', 'Déc'],
+			dayNames:['Lundi','Mardi','Mercredi','Jeudi','Vendredi','Samedi','Dimanche'],
+			dayNamesShort:['Lun','Mar','Mer','Jeu','Ven','Sam','Dim'],
+			titleFormat:{
+			    month: 'MMMM yyyy',                             // September 2009
+			    week: "MMMM d[ yyyy]{/[ MMM] d}", // Sep 7 - 13 2009
+			    day: 'ddd d MMM',                  // Tuesday, Sep 8, 2009
+			},
+			events: [
+						{
+							id: 1,
+							start: '2014-03-20 8:30:00',
+							end: '2014-03-20 15:45:00',
+							allDay: false
+						}, 
+						{
+							id: 2,
+							start: new Date(y, m, 28, 8, 0),
+							end: new Date(y, m, 28, 9, 45),
+							allDay: false
+						}
+					],
+				      backgroundColor: 'green',
+				      borderColor: 'green',
+				      textColor: 'yellow',
+				      dayClick: function(date, allDay, jsEvent, view) {
+				    	  $('#calendar').fullCalendar( 'gotoDate',date );
+				     	  $('#calendar').fullCalendar( 'changeView', "agendaDay" );
+				      },
+		});
+
 	$( "#locataire" ).click(function() {
 	$( "#infoEve" ).slideUp();
 	$( "#infoAss" ).slideUp();
@@ -85,15 +104,17 @@ $(document).ready(function() {
 <br>
 
 
-  <div class="span12 offset1">
-    <div class="container">
-      <div class="span3" id="formulaire">
+
+    <div class="container offset1">
+          	<div class="span7 " id="calendar">
+		</div>
+      <div class="span4" id="formulaire">
       
-      	<form action="../ConventionPDF">
+      	<form method="post" action="../ConventionPDF">
       	
-		   <div id="locataire"><ul class="nav nav-tabs">Informations Locataire</ul></div>
+		   <div id="locataire"><ul class="nav nav-tabs"> Informations Locataire </ul></div>
 		    
-     		<div id="infoLoc" class="span3">
+     		<div id="infoLoc" class="span4">
 
 		    <label>Nom</label>
 		    <input type="text">
@@ -106,12 +127,11 @@ $(document).ready(function() {
 		    <label>Téléphone</label>
 		    <input type="text">
 
-		     </div>
+		     </div>	    
 		    		    
-		    		    
-		    <div id="evenement"><ul class="nav nav-tabs">Informations Evènement</ul></div>
+		    <div id="evenement"><ul class="nav nav-tabs"> Informations Evènement </ul></div>
 
-			<div id="infoEve" class="span3">
+			<div id="infoEve" class="span4">
 		    <label>Nom de l'événement</label>
 
 		    <input type="text">
@@ -129,10 +149,10 @@ $(document).ready(function() {
 
 		    </div>  
 		    
-		    <div id="assurance"><ul class="nav nav-tabs">Informations Assurance</a></div>
+		    <div id="assurance"><ul class="nav nav-tabs"> Informations Assurance </ul></div>
 		    
 		   	
-		    <div id="infoAss" class="span3">
+		    <div id="infoAss" class="span4">
 
 		    <label>Agence d'assurance</label>
 		    <input type="text">
@@ -145,14 +165,14 @@ $(document).ready(function() {
 		    <button type="submit" class="btn">Pré-réservation</button>
 
 		       
-		    </fieldset>
 	    </form>
       </div>
       
       
-      	<div class="span8" id="calendar">
-		</div>
+
     </div>
-  </div> <!--  span 12 -->
+<!--  span 12 -->
+  
+  
  
     

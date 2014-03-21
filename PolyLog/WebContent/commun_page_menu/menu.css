@@ -25,7 +25,9 @@ text-align : center;
     margin-right: auto;
 }
 
-
+.titre{
+	background-color:blue;
+}
 .zoom img:hover {
 width:100%;
 height:100%;

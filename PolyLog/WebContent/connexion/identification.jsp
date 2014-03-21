@@ -10,8 +10,8 @@
 
 	int ok = -1;	
 	int alert=-1;
-	String ident = "";
-	String pwd = "";
+	String ident = "visbecq";
+	String pwd = "123456";
 	
 
 	if(manager.getServeur().connexion(ident, pwd)){
@@ -25,7 +25,7 @@
 	}	%>
 	<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
-	<title>Réserver un créneau</title>
+	<title>Connexion</title>
 	<jsp:include page="../commun_page_menu/menu.jsp"></jsp:include>
 
         <form class="navbar-form pull-right" method="post" action="../connexion/identification.jsp">
