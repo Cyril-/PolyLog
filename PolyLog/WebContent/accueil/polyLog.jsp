@@ -149,7 +149,7 @@ $(document).ready(function() {
   </head>
     
     <body>  
-<br></br>
+    <hr></hr>
 <div class="container">
 <div class="span12" id="calendar">
 </div>

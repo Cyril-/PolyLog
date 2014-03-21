@@ -56,12 +56,14 @@ $(document).ready(function() {
 			events: [
 						{
 							id: 1,
+							title: 'Anniversaire 80 ans Nesonson',
 							start: '2014-03-20 8:30:00',
 							end: '2014-03-20 15:45:00',
 							allDay: false
 						}, 
 						{
 							id: 2,
+							title: 'Anniversaire 20 ans Le Prig',
 							start: new Date(y, m, 28, 8, 0),
 							end: new Date(y, m, 28, 9, 45),
 							allDay: false
@@ -74,6 +76,14 @@ $(document).ready(function() {
 				    	  $('#calendar').fullCalendar( 'gotoDate',date );
 				     	  $('#calendar').fullCalendar( 'changeView', "agendaDay" );
 				      },
+				      eventClick: function(calEvent, jsEvent, view) {
+				    	  var start = $.fullCalendar.formatDate(calEvent._start, 'dd.MM.yyyy HH:mm:ss');
+				    	  var end = $.fullCalendar.formatDate(calEvent._end, 'dd.MM.yyyy HH:mm:ss');
+				    	  $("#nameE").val(calEvent.title);
+				    	  $("#dateEE").val(start);
+				    	  $("#dateES").val(end);
+				      },
+				      
 		});
 
 	$( "#locataire" ).click(function() {
@@ -93,6 +103,8 @@ $(document).ready(function() {
 		$( "#infoAss" ).slideDown();
 		$( "#infoLoc" ).slideUp();
 		});
+	
+
 });
 
 </script>
@@ -101,7 +113,7 @@ $(document).ready(function() {
 <title>Réserver un créneau</title>
 <jsp:include page="../commun_page_menu/menu.jsp"></jsp:include>
 </head>
-<br>
+<hr>
 
 
     <div class="container offset1">
@@ -128,21 +140,19 @@ $(document).ready(function() {
 
 		     </div>	    
 		    		    
-<<<<<<< HEAD
 		    <div id="evenement"><ul class="nav nav-tabs"> Informations Evènement </ul></div>
-=======
-		    		    
-		    <div id="evenement"><ul class="nav nav-tabs">Informations Evénement</ul></div>
->>>>>>> d9ac94b55b8ad37a7ec27c53e3f0dc678bc1a8b1
+
 
 			<div id="infoEve" class="span4">
 		    <label>Nom de l'événement</label>
 
-		    <input type="text" name="nomEvent">
+		    <input type="text" id="nameE" name="nomEvent">
 			<label>Description</label>
 		    <textarea rows="4" cols="50" style="resize:none" name="desc"></textarea>
-		    <label>Date</label>
-		    <input type="text" name="date">
+		    <label>Date Debut</label>
+		    <input type="text" id="dateEE" name="date">
+		    <label>Date Fin</label>
+		    <input type="text" id="dateES" name="date">
 			<label>Nombre de participants</label>
 		    <input type="text" name="nbPart">
 		    <label class="checkbox">

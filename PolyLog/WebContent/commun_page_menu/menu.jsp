@@ -33,6 +33,7 @@
             </ul>
             <ul class="nav">
             <li class="active"><a href="../accueil/create.jsp">Ajout Reservation</a></li>
+            <li class="active"><a href="../accueil/statistiques.jsp">Statistiques</a></li>
             </ul>
             <ul class="nav pull-right">
             <li class="active"><a >Bonjour <%= manager.getNom() %></a></li>

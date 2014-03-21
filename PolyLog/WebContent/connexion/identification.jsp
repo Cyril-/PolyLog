@@ -10,8 +10,8 @@
 
 	int ok = -1;	
 	int alert=-1;
-	String ident = "visbecq";
-	String pwd = "123456";
+	String ident = request.getParameter("ident");
+	String pwd = request.getParameter("pwd");
 	
 
 	if(manager.getServeur().connexion(ident, pwd)){
@@ -28,8 +28,16 @@
 	<title>Connexion</title>
 	<jsp:include page="../commun_page_menu/menu.jsp"></jsp:include>
 
-        <form class="navbar-form pull-right" method="post" action="../connexion/identification.jsp">
-          <input name="ident" class="span2" type="text" placeholder="Email">
-          <input name="pwd" class="span2" type="password" placeholder="Password">
-          <button type="submit" class="btn">Connexion</button>
-        </form>
+<body style="background-color: #f5f5f5;">
+<br>
+<div class="container">
+<div class=" span4 offset4">
+      <form class="form-signin" method="post" action="../connexion/identification.jsp">
+        <h3 class="form-signin-heading">Connectez-vous</h3>
+        <input type="text" name="ident" class="input-block-level" placeholder="Email">
+        <input type="password" name="pwd"  class="input-block-level" placeholder="Password">
+        <button class="btn btn-large btn-primary" type="submit">Connexion</button>
+      </form>
+      </div>
+
+      </body>
