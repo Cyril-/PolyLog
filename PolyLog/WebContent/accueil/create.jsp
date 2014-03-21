@@ -142,7 +142,6 @@ $(document).ready(function() {
 		    		    
 		    <div id="evenement"><ul class="nav nav-tabs"> Informations Evènement </ul></div>
 
-
 			<div id="infoEve" class="span4">
 		    <label>Nom de l'événement</label>
 
@@ -175,10 +174,16 @@ $(document).ready(function() {
 		    <label>Date de souscription</label>
 		    <input type="text" name="dateSous">
 		    </div>
-		    <button type="submit" class="btn">Réservation</button>
-		    <button type="submit" class="btn">Pré-réservation</button>
-
-		       
+		    <label class="checkbox">
+		    <input type="checkbox" name="prereservation"> Pré-réservation
+		    </label>
+		    <button type="submit" class="btn">Enregistrer</button>
+	    </form>
+	    <form method="post" action="../ConventionPDF">
+	    <button type="submit" class="btn">Imprimer Convention</button>
+	    </form>
+	    <form method="post" action="../FacturePDF">
+	    <button type="submit" class="btn">Imprimer Facture</button>
 	    </form>
       </div>
       
