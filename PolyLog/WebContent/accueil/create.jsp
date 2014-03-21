@@ -6,6 +6,7 @@
 	class="manager.Manager" />
 	
 <%@ page import="java.util.*" %>
+<%@ page import="beans.Reservation" %>
 
 
  <script src="//code.jquery.com/jquery-1.9.1.js"></script>
@@ -108,6 +109,7 @@ $(document).ready(function() {
 });
 
 </script>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
 <title>Réserver un créneau</title>
@@ -121,7 +123,7 @@ $(document).ready(function() {
 		</div>
       <div class="span4" id="formulaire">
       
-      	<form method="post" action="../ConventionPDF">
+      	<form method="post" action="../BDD">
       	
 		   <div id="locataire"><ul class="nav nav-tabs"> Informations Locataire </ul></div>
 		    
@@ -149,9 +151,9 @@ $(document).ready(function() {
 			<label>Description</label>
 		    <textarea rows="4" cols="50" style="resize:none" name="desc"></textarea>
 		    <label>Date Debut</label>
-		    <input type="text" id="dateEE" name="date">
+		    <input type="text" id="dateEE" name="dateDebut">
 		    <label>Date Fin</label>
-		    <input type="text" id="dateES" name="date">
+		    <input type="text" id="dateES" name="dateFin">
 			<label>Nombre de participants</label>
 		    <input type="text" name="nbPart">
 		    <label class="checkbox">

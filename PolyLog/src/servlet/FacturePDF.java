@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import manager.Manager;
+import beans.Reservation;
 
 import com.itextpdf.text.Document;
 import com.itextpdf.text.DocumentException;
@@ -27,6 +28,8 @@ import com.itextpdf.text.pdf.PdfWriter;
 @WebServlet("/FacturePDF")
 public class FacturePDF extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+	private Manager manager;
+	private Reservation reserv;
        
     /**
      * @see HttpServlet#HttpServlet()
@@ -88,7 +91,7 @@ public class FacturePDF extends HttpServlet {
             
             document.addTitle("Facture");
             
-            String prix=request.getParameter("prix");
+            String prix=reserv.getPrix();
            
             
             Paragraph p = new Paragraph("Facture",FontFactory.getFont(FontFactory.HELVETICA, 24, Font.BOLD)); // creation de la 1ere ligne du pdf qui correspond au titre 
@@ -110,9 +113,10 @@ public class FacturePDF extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		Manager manager = (Manager) request.getSession().getAttribute("manager");
+		manager = (Manager) request.getSession().getAttribute("manager");
 		if(manager==null) manager = new Manager();
 		request.getSession().setAttribute("manager", manager);
+		reserv=manager.getReserv();
 			
 			creerFacture(request,response);
 	}

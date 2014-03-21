@@ -1,6 +1,7 @@
 package servlet;
 
 import java.io.FileInputStream;
+
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -14,6 +15,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import manager.Manager;
+import beans.Reservation;
 
 import com.itextpdf.text.Document;
 import com.itextpdf.text.DocumentException;
@@ -31,6 +33,8 @@ import com.itextpdf.text.pdf.PdfWriter;
 @WebServlet("/ConventionPDF")
 public class ConventionPDF extends HttpServlet {
 	private static final long serialVersionUID = 8461920144699965519L;
+	private Manager manager;
+	private Reservation reserv;
        
     /**
      * @see HttpServlet#HttpServlet()
@@ -91,20 +95,20 @@ public class ConventionPDF extends HttpServlet {
             
             document.addTitle("Convention d'utilisation");
             
-            String nom=request.getParameter("nom");
-            String prenom=request.getParameter("prenom");
-            String adresse=request.getParameter("adresse");
-            String ville=request.getParameter("ville");
-            String tel=request.getParameter("tel");
-            String nomEvent=request.getParameter("nomEvent");
-            String desc=request.getParameter("desc");
-            String dateDebut=request.getParameter("dateDebut");
-            String dateFin=request.getParameter("dateFin");
-            String nbPart=request.getParameter("nbPart");
-            String prix=request.getParameter("prix");
-            String nomAssur=request.getParameter("nomAssur");
-            String nbAssur=request.getParameter("nbAssur");
-            String dateSous=request.getParameter("dateSous");
+            String nom=reserv.getNom();
+            String prenom=reserv.getPrenom();
+            String adresse=reserv.getAdresse();
+            String ville=reserv.getVille();
+            String tel=reserv.getTel();
+            String nomEvent=reserv.getNomEvent();
+            String desc=reserv.getDesc();
+            String dateDebut=reserv.getDateDebut();
+            String dateFin=reserv.getDateFin();
+            String nbPart=reserv.getNbPart();
+            String prix=reserv.getPrix();
+            String nomAssur=reserv.getNomAssur();
+            String nbAssur=reserv.getNbAssur();
+            String dateSous=reserv.getDateSous();
             
             Paragraph p = new Paragraph("Convention d'utilisation",FontFactory.getFont(FontFactory.HELVETICA, 24, Font.BOLD)); // creation de la 1ere ligne du pdf qui correspond au titre 
             p.setSpacingAfter(8);
@@ -149,9 +153,10 @@ public class ConventionPDF extends HttpServlet {
 
     
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		Manager manager = (Manager) request.getSession().getAttribute("manager");
+		manager = (Manager) request.getSession().getAttribute("manager");
 		if(manager==null) manager = new Manager();
 		request.getSession().setAttribute("manager", manager);
+		reserv=manager.getReserv();
 
 			creerConvention(request,response);
 		

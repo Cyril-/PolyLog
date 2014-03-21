@@ -7,13 +7,23 @@ import java.rmi.registry.Registry;
 
 import serveurRMI.InterfaceServeurRMI;
 import base.Base;
+import beans.Reservation;
 
 public class Manager{
 	private InterfaceServeurRMI serveur;
 	private boolean identifie = false;
 	private String nom = "";
 	Base base = new Base();
+	Reservation reserv=null;
 	
+	public Reservation getReserv() {
+		return reserv;
+	}
+
+	public void setReserv(Reservation reserv) {
+		this.reserv = reserv;
+	}
+
 	public Manager(){
 		int port = 20100;
 
