@@ -60,9 +60,9 @@ public class BDD extends HttpServlet {
 		String nomAssur=request.getParameter("nomAssur");
 		String nbAssur=request.getParameter("nbAssur");
 		String dateSous=request.getParameter("dateSous");
-		System.out.println(nom);
+
 		manager.setReserv(new Reservation(nom,prenom,adresse,ville,tel,nomEvent,desc,dateDebut,dateFin,nbPart,prix,nomAssur,nbAssur,dateSous));
-	
+		System.out.println("BDD   "+manager.getReserv());
 		response.sendRedirect("http://localhost:8080/Nauticaly/accueil/create.jsp");
 	}
 	

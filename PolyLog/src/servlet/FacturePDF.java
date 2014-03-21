@@ -99,7 +99,6 @@ public class FacturePDF extends HttpServlet {
             document.add(p);
             document.add(new Phrase("Prix : "+prix+"\n"));
             p.setSpacingAfter(8);
-            System.out.println("Facture");
             
       	} catch (DocumentException de) {
     		System.out.println("Erreur Servlet: " + de.getMessage());
