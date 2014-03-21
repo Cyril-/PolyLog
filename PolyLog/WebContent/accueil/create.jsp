@@ -104,7 +104,6 @@ $(document).ready(function() {
 <br>
 
 
-
     <div class="container offset1">
           	<div class="span7 " id="calendar">
 		</div>
@@ -117,35 +116,40 @@ $(document).ready(function() {
      		<div id="infoLoc" class="span4">
 
 		    <label>Nom</label>
-		    <input type="text">
+		    <input type="text" name="nom">
 		    <label>Prénom</label>
-		    <input type="text">
+		    <input type="text" name="prenom">
 		    <label>Adresse</label>
-		    <input type="text">
+		    <input type="text" name="adresse">
 		    <label>Ville</label>
-		    <input type="text">
+		    <input type="text" name="ville">
 		    <label>Téléphone</label>
-		    <input type="text">
+		    <input type="text" name="tel">
 
 		     </div>	    
 		    		    
+<<<<<<< HEAD
 		    <div id="evenement"><ul class="nav nav-tabs"> Informations Evènement </ul></div>
+=======
+		    		    
+		    <div id="evenement"><ul class="nav nav-tabs">Informations Evénement</ul></div>
+>>>>>>> d9ac94b55b8ad37a7ec27c53e3f0dc678bc1a8b1
 
 			<div id="infoEve" class="span4">
 		    <label>Nom de l'événement</label>
 
-		    <input type="text">
+		    <input type="text" name="nomEvent">
 			<label>Description</label>
-		    <textarea rows="4" cols="50" style="resize:none"></textarea>
+		    <textarea rows="4" cols="50" style="resize:none" name="desc"></textarea>
 		    <label>Date</label>
-		    <input type="text">
+		    <input type="text" name="date">
 			<label>Nombre de participants</label>
-		    <input type="text">
+		    <input type="text" name="nbPart">
 		    <label class="checkbox">
-		    <input type="checkbox"> Evénement privé
+		    <input type="checkbox" name="prive"> Evénement privé
 		    </label>
 		    <label>Prix</label>
-		    <input type="text">
+		    <input type="text" name="prix">
 
 		    </div>  
 		    
@@ -155,11 +159,11 @@ $(document).ready(function() {
 		    <div id="infoAss" class="span4">
 
 		    <label>Agence d'assurance</label>
-		    <input type="text">
+		    <input type="text" name="nomAssur">
 		    <label>Numéro de police d'assurance</label>
-		    <input type="text">
+		    <input type="text" name="nbAssur">
 		    <label>Date de souscription</label>
-		    <input type="text">
+		    <input type="text" name="dateSous">
 		    </div>
 		    <button type="submit" class="btn">Réservation</button>
 		    <button type="submit" class="btn">Pré-réservation</button>
