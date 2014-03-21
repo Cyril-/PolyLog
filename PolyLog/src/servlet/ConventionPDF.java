@@ -98,7 +98,8 @@ public class ConventionPDF extends HttpServlet {
             String tel=request.getParameter("tel");
             String nomEvent=request.getParameter("nomEvent");
             String desc=request.getParameter("desc");
-            String date=request.getParameter("date");
+            String dateDebut=request.getParameter("dateDebut");
+            String dateFin=request.getParameter("dateFin");
             String nbPart=request.getParameter("nbPart");
             String prix=request.getParameter("prix");
             String nomAssur=request.getParameter("nomAssur");
@@ -120,7 +121,7 @@ public class ConventionPDF extends HttpServlet {
             document.add(new Phrase("Nom de l'événement: "+nomEvent+"\n"));
             p.setSpacingAfter(1);
             document.add(new Phrase("Description: "+desc+"\n"));
-            document.add(new Phrase("Date: "+date+"\n"));
+            document.add(new Phrase("Date Debut: "+dateDebut+"       Date Fin: "+dateFin+"\n"));
             document.add(new Phrase("Nombre de participants : "+nbPart+"\n"));
             document.add(new Phrase("Prix : "+prix+"\n"));
             p.setSpacingAfter(8);
