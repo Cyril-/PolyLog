@@ -48,7 +48,7 @@ public class ConventionPDF extends HttpServlet {
     	Manager manager = (Manager) request.getSession().getAttribute("manager");
 		if(manager==null) manager = new Manager();
 		request.getSession().setAttribute("manager", manager);
-
+		reserv=manager.getReserv();
 			creerConvention(request,response);
 		
   }
@@ -98,7 +98,7 @@ public class ConventionPDF extends HttpServlet {
             /*********************Mise en place de la presentation du document***********************/
             
             document.addTitle("Convention d'utilisation");
-            
+System.out.println("PDF   "+reserv);
             String nom=reserv.getNom();
             String prenom=reserv.getPrenom();
             String adresse=reserv.getAdresse();
@@ -148,21 +148,17 @@ public class ConventionPDF extends HttpServlet {
     		System.out.println("Erreur Servlet: " + de.getMessage());
     	}
 
-            System.out.println("pdf creeer");
             document.close();
            
     }
     
     
 
-    
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		manager = (Manager) request.getSession().getAttribute("manager");
-		if(manager==null) manager = new Manager();
-		request.getSession().setAttribute("manager", manager);
-		reserv=manager.getReserv();
-
-			creerConvention(request,response);
+		
 
 		
     }
