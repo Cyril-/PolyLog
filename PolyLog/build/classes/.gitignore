@@ -1,8 +1,3 @@
-/base
-/base.properties
-/manager
-<<<<<<< HEAD
-=======
-/base
->>>>>>> 7067c269c78d6eaf59dc047a7319bc29f8ce7948
 /servlet
+/beans
+/manager

@@ -3,7 +3,10 @@
  * Docs & License: http://arshaw.com/fullcalendar/
  * (c) 2013 Adam Shaw
  */
-
+ 
+.fc-day, .fc-day-header, .fc-header-center, .fc-header-left, .fc-header-right{
+	border: 1px solid #ddd;
+}
 
 .fc {
 	direction: ltr;

@@ -11,6 +11,8 @@
     <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
 <link type='text/css' href='../commun_page_menu/menu.css'	rel='stylesheet' />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+
 
 
   <div class="navbar navbar-inverse navbar-fixed-top">
@@ -31,6 +33,9 @@
             </ul>
             <ul class="nav">
             <li class="active"><a href="../accueil/create.jsp">Ajout Reservation</a></li>
+            <li class="active"><a href="../accueil/statistiques.jsp">Statistiques</a></li>
+            <li class="active"><a href="../accueil/configurerConvention.jsp">Configurer convention</a></li>
+            <li class="active"><a href="../accueil/configurerSalle.jsp">Les salles</a></li>
             </ul>
             <ul class="nav pull-right">
             <li class="active"><a >Bonjour <%= manager.getNom() %></a></li>
@@ -38,19 +43,8 @@
               <button type="submit" class="btn">Deconnexion</button>
             </form>
 			<% 
-           		}else{
-           	%>
-           	</ul>
-            <form class="navbar-form pull-right" method="post" action="../connexion/identification.jsp">
-              <input name="ident" class="span2" type="text" placeholder="Email">
-              <input name="pwd" class="span2" type="password" placeholder="Password">
-              <button type="submit" class="btn">Connexion</button>
-            </form>
-           	
-           	<%		
            		}
 			%>
-
 
           </div><!--/.nav-collapse -->
         </div>

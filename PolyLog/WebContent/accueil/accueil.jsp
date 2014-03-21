@@ -12,12 +12,16 @@
 <title>Accueil</title>
 <jsp:include page="../commun_page_menu/menu.jsp"></jsp:include>
 </head>
+<body>
 
- <div class="hero-unit">
+ <div class="hero-unit"  style=" background-image:url(../images/salle.jpg);">
               <h1 style=" color:grey;">Mairie De Chamigny</h1>
               <center>
               	<p><h3>Vous voulez verifier si la salle est libre sans vous déplacer en Mairie ?</h3> alors regardez vite sur l'agenda en ligne</p>
               	<p><a class="btn btn-primary btn-large" href="../accueil/polyLog.jsp">Voir Agenda</a></p>
               </center>
+                     <br>  
             </div>    
-    
+
+  </body>          
+<jsp:include page="../commun_page_menu/footer.jsp"></jsp:include>
