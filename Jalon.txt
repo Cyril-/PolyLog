@@ -1,0 +1,53 @@
+- Présentation du sujet 	-> Francois
+
+- Objectif et contexte
+
+
+	métier 		->
+
+		Déjà fait, reprendre dans les diapos de mardi 
+
+	besoin		->	Cyril
+			
+		Quelques exigences 
+		Diagramme d'activité
+
+	architecture
+
+		diagramme déploiement 		-> Kevin
+
+- Démontrer la faisabilité
+
+	Prototype
+
+		diagramme classe 		-> ALi
+		diagramme de séquences 		-> Cyril
+		IHM 				-> Romain
+	
+	Test -> 
+
+		scénario 
+		plan de test 
+
+
+	Evolution	-> ALi
+
+		montrer que le pattern ne nous oblige pas à tout changer en cas de modif 
+		Donner 2 ou 3 pistes d'évolution 
+
+
+		Configurable donc adaptable aux attentes du client
+		Certaines attentes non réalisées ?prochaine version (stats)...
+
+
+
+- Risques maitrisés	-> Kevin
+
+	Reprendre le document sur les risques    
+
+
+- PLanifier les couts et les itérations de développement  -> Francois
+
+	Itération 
+	Cout de développement
+	Cout d'installation
