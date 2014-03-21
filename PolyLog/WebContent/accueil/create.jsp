@@ -26,6 +26,16 @@ $(document).ready(function() {
 		$( "#infoEve" ).slideUp();
 		$( "#infoAss" ).slideUp();
 		$( "#infoLoc" ).slideDown();
+		$("#prixE").val("100");
+		
+		$("select").change(function () {
+			var leSelect= $(this).val();
+			if(leSelect==0)$("#prixE").val(100);
+			if(leSelect==1)$("#prixE").val(100*0.80);
+			if(leSelect==2)$("#prixE").val(100*0.75);
+			if(leSelect==3)$("#prixE").val(100*1.25);
+			if(leSelect==4)$("#prixE").val(100*0.50);
+	        });
 		
 		$('#calendar').fullCalendar({
 			header: {
@@ -59,14 +69,20 @@ $(document).ready(function() {
 							title: 'Anniversaire 80 ans Nesonson',
 							start: '2014-03-20 8:30:00',
 							end: '2014-03-20 15:45:00',
-							allDay: false
+							allDay: false,
+							participant:100,
+							description:" LE super anniversaireeeeeeeeeee du Nesonson",
+							prix:32
 						}, 
 						{
 							id: 2,
 							title: 'Anniversaire 20 ans Le Prig',
 							start: new Date(y, m, 28, 8, 0),
 							end: new Date(y, m, 28, 9, 45),
-							allDay: false
+							allDay: false,
+							participant:200,
+							description:" LE super anniversaireeeeeeeeeee du Prig",
+							prix:'54'
 						}
 					],
 				      backgroundColor: 'green',
@@ -80,8 +96,11 @@ $(document).ready(function() {
 				    	  var start = $.fullCalendar.formatDate(calEvent._start, 'dd.MM.yyyy HH:mm:ss');
 				    	  var end = $.fullCalendar.formatDate(calEvent._end, 'dd.MM.yyyy HH:mm:ss');
 				    	  $("#nameE").val(calEvent.title);
+				    	  $("#participantE").val(calEvent.participant);
+				    	  $("#descriptionE").val(calEvent.description);
 				    	  $("#dateEE").val(start);
 				    	  $("#dateES").val(end);
+				    	  $("#prixE").val(prix);
 				      },
 				      
 		});
@@ -131,6 +150,14 @@ $(document).ready(function() {
 		    <input type="text" name="nom">
 		    <label>Prénom</label>
 		    <input type="text" name="prenom">
+		    <label>Type de locataire</label>
+		    <select id="selectL">
+		    <option value=0 selected>Selectionnez un type</option>
+		    <option value=1 >Habitant de la commune</option>
+		    <option value="2">Association</option>
+		    <option value="3">Extérieur</option>
+		    <option value="4">privée</option>
+		    </select>
 		    <label>Adresse</label>
 		    <input type="text" name="adresse">
 		    <label>Ville</label>
@@ -147,18 +174,15 @@ $(document).ready(function() {
 
 		    <input type="text" id="nameE" name="nomEvent">
 			<label>Description</label>
-		    <textarea rows="4" cols="50" style="resize:none" name="desc"></textarea>
+		    <textarea rows="4" cols="50" id="descriptionE" style="resize:none" name="desc"></textarea>
 		    <label>Date Debut</label>
-		    <input type="text" id="dateEE" name="date">
+		    <input type="text" id="dateEE" name="dateDebut">
 		    <label>Date Fin</label>
-		    <input type="text" id="dateES" name="date">
+		    <input type="text" id="dateES" name="dateFin">
 			<label>Nombre de participants</label>
-		    <input type="text" name="nbPart">
-		    <label class="checkbox">
-		    <input type="checkbox" name="prive"> Evénement privé
-		    </label>
+		    <input type="text" id="participantE" name="nbPart">
 		    <label>Prix</label>
-		    <input type="text" name="prix">
+		    <input type="text" id="prixE" name="prix">
 
 		    </div>  
 		    
