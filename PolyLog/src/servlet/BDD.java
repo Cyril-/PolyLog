@@ -8,8 +8,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+
 import manager.Manager;
 import beans.Reservation;
+
 
 /**
  * Servlet implementation class BDD
@@ -17,7 +19,9 @@ import beans.Reservation;
 @WebServlet("/BDD")
 public class BDD extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+
 	private Manager manager;
+
        
     /**
      * @see HttpServlet#HttpServlet()
@@ -38,6 +42,7 @@ public class BDD extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
 		manager = (Manager) request.getSession().getAttribute("manager");
 		if(manager==null) manager = new Manager();
 		request.getSession().setAttribute("manager", manager);

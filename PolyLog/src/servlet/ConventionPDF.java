@@ -45,7 +45,11 @@ public class ConventionPDF extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        
+    	Manager manager = (Manager) request.getSession().getAttribute("manager");
+		if(manager==null) manager = new Manager();
+		request.getSession().setAttribute("manager", manager);
+
+			creerConvention(request,response);
 		
   }
     
@@ -159,6 +163,7 @@ public class ConventionPDF extends HttpServlet {
 		reserv=manager.getReserv();
 
 			creerConvention(request,response);
+
 		
     }
 
